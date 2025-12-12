@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { services } from "../data/services";
 import { Link } from "react-router-dom";
-
+import bgImage from "../images/image3.jpg";
 
 const Services = () => {
    const [tab, setTab] = useState("All");
@@ -13,7 +13,19 @@ const Services = () => {
 
 
    return (
-      <div className="page">
+      <div
+         className="page"
+         style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "80vh",
+            padding: "20px",
+
+
+         }}
+      >
          <h2>Services</h2>
 
 
@@ -26,7 +38,7 @@ const Services = () => {
                <button key={t} onClick={() => setTab(t)}>{t}</button>
             ))}
          </div>
-        <div className="grid mb-12">
+         <div className="grid mb-12">
             {filtered.map((s) => (
                <div className="card" key={s.name}>
                   <h3>{s.name}</h3>

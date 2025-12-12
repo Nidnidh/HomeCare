@@ -3,11 +3,22 @@
 import Card from "../components/Card";
 import { patients } from "../data/patients";
 import { services } from "../data/services";
-
+import bgImage from "../images/image1.jpg";
 
 const Dashboard = () => {
    return (
-      <div className="page">
+      <div
+         className="page"
+         style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "75vh",
+            padding: "20px",
+
+         }}
+      >
          <h2>Dashboard Overview</h2>
 
 

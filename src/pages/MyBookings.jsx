@@ -1,9 +1,19 @@
+
+import bgImage from "../images/image7.jpg";
 const MyBookings = () => {
    const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
-
-
    return (
-      <div className="page">
+      <div
+         className="page"
+         style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "70vh",
+            padding: "20px",
+         }}
+      >
          <h2>My Bookings</h2>
 
 
